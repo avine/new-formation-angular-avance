@@ -1,0 +1,21 @@
+node_modules
+.idea
+PDF
+dist
+.DS_Store
+.angular
+/build
+*.iml
+npm-debug.log
+
+## IDE
+# IDE - VSCode
+.vscode/*
+
+## Due to the Zenika framework formation
+# package-lock.json
+Exercises/tmp
+Exercises/workspaces/*
+!Exercises/workspaces/README.md
+
+*.mp4
