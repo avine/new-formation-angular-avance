@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customer } from '../customer/customer.types';
@@ -7,7 +7,7 @@ import { BasketService } from './basket.service';
 @Component({
   standalone: true,
   selector: 'app-basket',
-  imports: [NgFor, NgIf, CurrencyPipe],
+  imports: [CurrencyPipe],
   templateUrl: './basket.component.html',
 })
 export class BasketComponent implements OnInit {

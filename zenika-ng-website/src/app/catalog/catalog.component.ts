@@ -1,4 +1,4 @@
-import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { zip } from 'rxjs';
@@ -11,7 +11,7 @@ import { Product } from './product/product.types';
 @Component({
   standalone: true,
   selector: 'app-catalog',
-  imports: [RouterLink, NgFor, NgIf, ProductComponent, CurrencyPipe],
+  imports: [RouterLink, ProductComponent, CurrencyPipe],
   templateUrl: './catalog.component.html',
 })
 export class CatalogComponent implements OnInit {
