@@ -8,7 +8,5 @@ import { BasketService } from '../basket/basket.service';
 export class MenuComponent {
   private basketService = inject(BasketService);
 
-  protected get numberOfItems() {
-    return this.basketService.numberOfItems;
-  }
+  protected numberOfItems = this.basketService.numberOfItems;
 }
