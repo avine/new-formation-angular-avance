@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { zip } from 'rxjs';
 import { WELCOME_MSG } from '../app.token';
 import { BasketService } from '../basket/basket.service';
@@ -8,6 +8,7 @@ import { Product } from './product/product.types';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CatalogComponent implements OnInit {
   protected welcomeMsg = inject(WELCOME_MSG);

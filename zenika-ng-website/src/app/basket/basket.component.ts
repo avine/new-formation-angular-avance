@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Customer } from '../customer/customer.types';
 import { BasketService } from './basket.service';
@@ -6,6 +6,7 @@ import { BasketService } from './basket.service';
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasketComponent implements OnInit {
   protected customer: Customer = { name: '', address: '', creditCard: '' };
