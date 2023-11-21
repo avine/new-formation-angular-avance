@@ -1,8 +1,12 @@
+import { CurrencyPipe, UpperCasePipe } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Product } from './product.types';
 
 @Component({
+  standalone: true,
   selector: 'app-product',
+  imports: [RouterLink, UpperCasePipe, CurrencyPipe],
   templateUrl: './product.component.html',
 })
 export class ProductComponent {

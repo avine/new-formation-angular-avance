@@ -1,3 +1,4 @@
+import { CurrencyPipe, NgIf } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../catalog/product/product.types';
@@ -5,7 +6,9 @@ import { ApiService } from '../shared/services/api.service';
 import { PRODUCT_DETAILS_PARAM_KEY } from './product-details.config';
 
 @Component({
+  standalone: true,
   selector: 'app-product-details',
+  imports: [NgIf, CurrencyPipe],
   templateUrl: './product-details.component.html',
 })
 export class ProductDetailsComponent implements OnInit {

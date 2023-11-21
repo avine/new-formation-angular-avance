@@ -14,8 +14,7 @@ describe('CatalogComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CatalogComponent],
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, CatalogComponent],
       providers: [
         {
           provide: CatalogService,

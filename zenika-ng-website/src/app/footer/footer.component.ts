@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { ApiService } from '../shared/services/api.service';
 
 @Component({
+  standalone: true,
   selector: 'app-footer',
   templateUrl: './footer.component.html',
 })
