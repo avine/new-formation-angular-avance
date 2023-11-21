@@ -3,11 +3,11 @@ import { CatalogService } from './catalog.service';
 import { Product } from './product/product.types';
 
 export const MockCatalogService: Partial<CatalogService> = {
-  products: [
+  _products$: [
     { id: 'id', title: 'title', description: 'description', photo: 'photo', price: 10, stock: 2 },
   ] as Product[],
 
-  isStockEmpty: true,
+  isStockEmpty$: true,
 
   fetch: jasmine
     .createSpy('fetch')

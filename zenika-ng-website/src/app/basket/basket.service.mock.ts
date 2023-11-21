@@ -3,11 +3,11 @@ import { BasketService } from './basket.service';
 import { BasketItem } from './basket.types';
 
 export const MockBasketService: Partial<BasketService> = {
-  items: [] as BasketItem[],
+  _items$: [] as BasketItem[],
 
-  total: 0,
+  total$: 0,
 
-  numberOfItems: 0,
+  numberOfItems$: 0,
 
   fetch: jasmine.createSpy('fetch').and.returnValue(of([] as BasketItem[])),
 
